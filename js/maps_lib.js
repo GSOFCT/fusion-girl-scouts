@@ -206,7 +206,18 @@ var MapsLib = {
     var whereClause = MapsLib.locationColumn + " not equal to ''";
 
     //-----custom filters-------
+ //---MODIFY column header and values below to match your Google Fusion Table AND index.html
+    //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
 
+    var type_column = "'Age Group'";
+    var searchType = type_column + " IN (-1,";
+    if ( $("#cbType1").is(':checked')) searchType += "1,";
+    if ( $("#cbType2").is(':checked')) searchType += "2,";
+    if ( $("#cbType3").is(':checked')) searchType += "3,";
+    if ( $("#cbType4").is(':checked')) searchType += "4,";
+    if ( $("#cbType5").is(':checked')) searchType += "5,";
+    if ( $("#cbType5").is(':checked')) searchType += "6,";
+    whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
     if (address != "") {
