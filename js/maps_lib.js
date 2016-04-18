@@ -82,7 +82,7 @@ var MapsLib = {
     MapsLib.searchrecords = null;
 
     //MODIFY to match 3-bucket GFT values of pre-checked polygon1  - see also further below
-    MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k");
+    MapsLib.setDemographicsLabels("very low", "low", "moderate", "high", "very high");
 
     // MODIFY if needed: defines background polygon1 and polygon2 layers
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
@@ -317,15 +317,21 @@ var MapsLib = {
       MapsLib.searchRadiusCircle.setMap(null);
   },
 
-  setDemographicsLabels: function(left, middle, right) {
-    $('#legend-left').fadeOut('fast', function(){
-      $("#legend-left").html(left);
+  setDemographicsLabels: function(one, two, three, four, five) {
+    $('#legend-one').fadeOut('fast', function(){
+      $("#legend-one").html(one);
     }).fadeIn('fast');
-    $('#legend-middle').fadeOut('fast', function(){
-      $("#legend-middle").html(middle);
+    $('#legend-two').fadeOut('fast', function(){
+      $("#legend-two").html(two);
     }).fadeIn('fast');
-    $('#legend-right').fadeOut('fast', function(){
-      $("#legend-right").html(right);
+    $('#legend-three').fadeOut('fast', function(){
+      $("#legend-three").html(three);
+    }).fadeIn('fast');
+    $('#legend-four').fadeOut('fast', function(){
+      $("#legend-four").html(four);
+    }).fadeIn('fast');
+    $('#legend-five').fadeOut('fast', function(){
+      $("#legend-five").html(five);
     }).fadeIn('fast');
   },
 
