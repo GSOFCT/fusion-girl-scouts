@@ -205,8 +205,8 @@ var MapsLib = {
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
       $("#legend-3").css({"border-top-color": "#ffffff"});
-      $("#legend-4").css({"border-top-color": "#dfc27d"});
-      $("#legend-5").css({"border-top-color": "#a6611a"});
+      $("#legend-4").css({"border-top-color": "#e06666"});
+      $("#legend-5").css({"border-top-color": "#dd3640"});
     }
     if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
