@@ -180,7 +180,7 @@ var MapsLib = {
     }
    if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
-      MapsLib.setDemographicsLabels("%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
