@@ -240,7 +240,7 @@ var MapsLib = {
     }
     if ($("#rbPolygonOff").is(':checked')) {
       MapsLib.polygonOff.setMap(map);
-      MapsLib.setDemographicsLabels(" ", " ", " ", " ", " ");
+      MapsLib.setDemographicsLabels("&ndash", "ndash", "ndash", "ndash", "ndash");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#ffffff"});
       $("#legend-2").css({"border-top-color": "#ffffff"});
