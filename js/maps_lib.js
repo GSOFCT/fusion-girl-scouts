@@ -330,20 +330,20 @@ var MapsLib = {
   },
 
   setDemographicsLabels: function(one, two, three, four, five) {
-    $('#legend-one').fadeOut('fast', function(){
-      $("#legend-one").html(one);
+    $('#legend-1').fadeOut('fast', function(){
+      $("#legend-1").html(one);
     }).fadeIn('fast');
-    $('#legend-two').fadeOut('fast', function(){
-      $("#legend-two").html(two);
+    $('#legend-2').fadeOut('fast', function(){
+      $("#legend-2").html(two);
     }).fadeIn('fast');
-    $('#legend-three').fadeOut('fast', function(){
-      $("#legend-three").html(three);
+    $('#legend-3').fadeOut('fast', function(){
+      $("#legend-3").html(three);
     }).fadeIn('fast');
-    $('#legend-four').fadeOut('fast', function(){
-      $("#legend-four").html(four);
+    $('#legend-4').fadeOut('fast', function(){
+      $("#legend-4").html(four);
     }).fadeIn('fast');
-    $('#legend-five').fadeOut('fast', function(){
-      $("#legend-five").html(five);
+    $('#legend-5').fadeOut('fast', function(){
+      $("#legend-5").html(five);
     }).fadeIn('fast');
   },
 
