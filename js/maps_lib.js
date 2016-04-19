@@ -180,7 +180,7 @@ var MapsLib = {
     }
    if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-5%", "5-10%", "10-15%", "15-20%", "20-25%");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
@@ -190,7 +190,7 @@ var MapsLib = {
     }
    if ($("#rbPolygon3").is(':checked')) {
       MapsLib.polygon3.setMap(map);
-      MapsLib.setDemographicsLabels("0-3%", "3-6%", "6-9%", "9-12%", "12-15%");
+      MapsLib.setDemographicsLabels("0-4%", "4-8%", "8-12%", "12-16%", "16-20%");
       /* TO DO: Insert actual daisy colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
@@ -200,7 +200,7 @@ var MapsLib = {
     }
     if ($("#rbPolygon4").is(':checked')) {
       MapsLib.polygon4.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-2%", "2-4%", "4-6%", "6-8%", "8-10%");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
@@ -210,43 +210,43 @@ var MapsLib = {
     }
     if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-1%", "1-2%", "2-3%", "3-4%", "4-5%");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
       $("#legend-3").css({"border-top-color": "#ffffff"});
-      $("#legend-4").css({"border-top-color": "#dfc27d"});
-      $("#legend-5").css({"border-top-color": "#a6611a"});
+      $("#legend-4").css({"border-top-color": "#f6b26b"});
+      $("#legend-5").css({"border-top-color": "#f27536"});
     }
     if ($("#rbPolygon6").is(':checked')) {
       MapsLib.polygon6.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-1%", "1-2%", "2-3%", "3-4%", "4-5%");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
       $("#legend-3").css({"border-top-color": "#ffffff"});
-      $("#legend-4").css({"border-top-color": "#dfc27d"});
-      $("#legend-5").css({"border-top-color": "#a6611a"});
+      $("#legend-4").css({"border-top-color": "#ffd966"});
+      $("#legend-5").css({"border-top-color": "#faa61a"});
     }
     if ($("#rbPolygon7").is(':checked')) {
       MapsLib.polygon7.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-4%", "4-8%", "8-12%", "12-16%", "16-20%");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
       $("#legend-3").css({"border-top-color": "#ffffff"});
-      $("#legend-4").css({"border-top-color": "#dfc27d"});
-      $("#legend-5").css({"border-top-color": "#a6611a"});
+      $("#legend-4").css({"border-top-color": "#93c47d"});
+      $("#legend-5").css({"border-top-color": "#00ae58"});
     }
     if ($("#rbPolygonOff").is(':checked')) {
       MapsLib.polygonOff.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels(" ", " ", " ", " ", " ");
       /* TO DO: Insert actual brownie colors */
-      $("#legend-1").css({"border-top-color": "#404040"});
-      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-1").css({"border-top-color": "#ffffff"});
+      $("#legend-2").css({"border-top-color": "#ffffff"});
       $("#legend-3").css({"border-top-color": "#ffffff"});
-      $("#legend-4").css({"border-top-color": "#dfc27d"});
-      $("#legend-5").css({"border-top-color": "#a6611a"});
+      $("#legend-4").css({"border-top-color": "#ffffff"});
+      $("#legend-5").css({"border-top-color": "#ffffff"});
     }
 
     var address = $("#search_address").val();
