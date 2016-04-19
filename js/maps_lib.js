@@ -188,8 +188,8 @@ var MapsLib = {
       $("#legend-4").css({"border-top-color": "#dfc27d"});
       $("#legend-5").css({"border-top-color": "#a6611a"});
     }
-   if ($("#rbPolygon1").is(':checked')) {
-      MapsLib.polygon1.setMap(map);
+   if ($("#rbPolygon3").is(':checked')) {
+      MapsLib.polygon3.setMap(map);
       MapsLib.setDemographicsLabels("0-3%", "3-6%", "6-9%", "9-12%", "12-15%");
       /* TO DO: Insert actual daisy colors */
       $("#legend-1").css({"border-top-color": "#404040"});
