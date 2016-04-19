@@ -190,26 +190,63 @@ var MapsLib = {
     }
     if ($("#rbPolygon3").is(':checked')) {
       MapsLib.polygon3.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#c27ba0"});
+      $("#legend-5").css({"border-top-color": "##ab218e"});
     }
     if ($("#rbPolygon4").is(':checked')) {
       MapsLib.polygon4.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#dfc27d"});
+      $("#legend-5").css({"border-top-color": "#a6611a"});
     }
     if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#dfc27d"});
+      $("#legend-5").css({"border-top-color": "#a6611a"});
     }
     if ($("#rbPolygon6").is(':checked')) {
       MapsLib.polygon6.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#dfc27d"});
+      $("#legend-5").css({"border-top-color": "#a6611a"});
     }
     if ($("#rbPolygon7").is(':checked')) {
       MapsLib.polygon7.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#dfc27d"});
+      $("#legend-5").css({"border-top-color": "#a6611a"});
     }
-    if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
-      MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
+    if ($("#rbPolygonOff").is(':checked')) {
+      MapsLib.polygonOff.setMap(map);
+      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#dfc27d"});
+      $("#legend-5").css({"border-top-color": "#a6611a"});
     }
 
     var address = $("#search_address").val();
