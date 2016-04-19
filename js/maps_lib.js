@@ -38,9 +38,9 @@ var MapsLib = {
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
-  locationColumn:     "geometry",
+  locationColumn:     "Address",
 
-  map_centroid:       new google.maps.LatLng(41.7682,-72.684), //center that your map defaults to
+  map_centroid:       new google.maps.LatLng(41.5682,-72.684), //center that your map defaults to
   locationScope:      "connecticut",      //geographical area appended to all address searches
   recordName:         "result",       //for showing number of results
   recordNamePlural:   "results",
@@ -82,7 +82,7 @@ var MapsLib = {
     MapsLib.searchrecords = null;
 
     //MODIFY to match 3-bucket GFT values of pre-checked polygon1  - see also further below
-    MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k");
+    MapsLib.setDemographicsLabels("very low", "low", "moderate", "high", "very high");
 
     // MODIFY if needed: defines background polygon1 and polygon2 layers
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
@@ -170,11 +170,23 @@ var MapsLib = {
     // MODIFY if needed: shows background polygon layer depending on which checkbox is selected
     if ($("#rbPolygon1").is(':checked')) {
       MapsLib.polygon1.setMap(map);
-      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("very low", "low", "average", "high", "very high");
+      /* TO DO: Insert actual daisy colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#92c5de"});
+      $("#legend-5").css({"border-top-color": "#0571b0"});
     }
-    if ($("#rbPolygon2").is(':checked')) {
+   if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("very low", "low", "average", "high", "very high");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#dfc27d"});
+      $("#legend-5").css({"border-top-color": "#a6611a"});
     }
     if ($("#rbPolygon3").is(':checked')) {
       MapsLib.polygon3.setMap(map);
@@ -206,7 +218,18 @@ var MapsLib = {
     var whereClause = MapsLib.locationColumn + " not equal to ''";
 
     //-----custom filters-------
+ //---MODIFY column header and values below to match your Google Fusion Table AND index.html
+    //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
 
+    var type_column = "'Age Group'";
+    var searchType = type_column + " IN (-1,";
+    if ( $("#cbType1").is(':checked')) searchType += "1,";
+    if ( $("#cbType2").is(':checked')) searchType += "2,";
+    if ( $("#cbType3").is(':checked')) searchType += "3,";
+    if ( $("#cbType4").is(':checked')) searchType += "4,";
+    if ( $("#cbType5").is(':checked')) searchType += "5,";
+    if ( $("#cbType5").is(':checked')) searchType += "6,";
+    whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
     if (address != "") {
@@ -306,15 +329,21 @@ var MapsLib = {
       MapsLib.searchRadiusCircle.setMap(null);
   },
 
-  setDemographicsLabels: function(left, middle, right) {
-    $('#legend-left').fadeOut('fast', function(){
-      $("#legend-left").html(left);
+  setDemographicsLabels: function(one, two, three, four, five) {
+    $('#legend-1').fadeOut('fast', function(){
+      $("#legend-1").html(one);
     }).fadeIn('fast');
-    $('#legend-middle').fadeOut('fast', function(){
-      $("#legend-middle").html(middle);
+    $('#legend-2').fadeOut('fast', function(){
+      $("#legend-2").html(two);
     }).fadeIn('fast');
-    $('#legend-right').fadeOut('fast', function(){
-      $("#legend-right").html(right);
+    $('#legend-3').fadeOut('fast', function(){
+      $("#legend-3").html(three);
+    }).fadeIn('fast');
+    $('#legend-4').fadeOut('fast', function(){
+      $("#legend-4").html(four);
+    }).fadeIn('fast');
+    $('#legend-5').fadeOut('fast', function(){
+      $("#legend-5").html(five);
     }).fadeIn('fast');
   },
 
