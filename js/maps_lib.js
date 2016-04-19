@@ -188,15 +188,15 @@ var MapsLib = {
       $("#legend-4").css({"border-top-color": "#dfc27d"});
       $("#legend-5").css({"border-top-color": "#a6611a"});
     }
-    if ($("#rbPolygon3").is(':checked')) {
-      MapsLib.polygon3.setMap(map);
-      MapsLib.setDemographicsLabels("3-5%", "low", "average", "high", "very high");
-      /* TO DO: Insert actual brownie colors */
+   if ($("#rbPolygon1").is(':checked')) {
+      MapsLib.polygon1.setMap(map);
+      MapsLib.setDemographicsLabels("0-3%", "3-6%", "6-9%", "9-12%", "12-15%");
+      /* TO DO: Insert actual daisy colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
       $("#legend-3").css({"border-top-color": "#ffffff"});
       $("#legend-4").css({"border-top-color": "#c27ba0"});
-      $("#legend-5").css({"border-top-color": "##ab218e"});
+      $("#legend-5").css({"border-top-color": "#ab218e"});
     }
     if ($("#rbPolygon4").is(':checked')) {
       MapsLib.polygon4.setMap(map);
