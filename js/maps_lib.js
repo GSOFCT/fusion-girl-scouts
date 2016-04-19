@@ -228,7 +228,7 @@ var MapsLib = {
     if ( $("#cbType3").is(':checked')) searchType += "3,";
     if ( $("#cbType4").is(':checked')) searchType += "4,";
     if ( $("#cbType5").is(':checked')) searchType += "5,";
-    if ( $("#cbType5").is(':checked')) searchType += "6,";
+    if ( $("#cbType6").is(':checked')) searchType += "6,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
