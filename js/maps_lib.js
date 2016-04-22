@@ -170,7 +170,7 @@ var MapsLib = {
     // MODIFY if needed: shows background polygon layer depending on which checkbox is selected
     if ($("#rbPolygon1").is(':checked')) {
       MapsLib.polygon1.setMap(map);
-      MapsLib.setDemographicsLabels("very low", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-3%", "3-6%", "6-9%", "9-12%", "12-15%");
       /* TO DO: Insert actual daisy colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
@@ -180,7 +180,7 @@ var MapsLib = {
     }
    if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
-      MapsLib.setDemographicsLabels("very low", "low", "average", "high", "very high");
+      MapsLib.setDemographicsLabels("0-5%", "5-10%", "10-15%", "15-20%", "20-25%");
       /* TO DO: Insert actual brownie colors */
       $("#legend-1").css({"border-top-color": "#404040"});
       $("#legend-2").css({"border-top-color": "#bababa"});
@@ -188,28 +188,65 @@ var MapsLib = {
       $("#legend-4").css({"border-top-color": "#dfc27d"});
       $("#legend-5").css({"border-top-color": "#a6611a"});
     }
-    if ($("#rbPolygon3").is(':checked')) {
+   if ($("#rbPolygon3").is(':checked')) {
       MapsLib.polygon3.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("0-4%", "4-8%", "8-12%", "12-16%", "16-20%");
+      /* TO DO: Insert actual daisy colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#c27ba0"});
+      $("#legend-5").css({"border-top-color": "#ab218e"});
     }
     if ($("#rbPolygon4").is(':checked')) {
       MapsLib.polygon4.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("0-2%", "2-4%", "4-6%", "6-8%", "8-10%");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#e06666"});
+      $("#legend-5").css({"border-top-color": "#dd3640"});
     }
     if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("0-1%", "1-2%", "2-3%", "3-4%", "4-5%");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#f6b26b"});
+      $("#legend-5").css({"border-top-color": "#f27536"});
     }
     if ($("#rbPolygon6").is(':checked')) {
       MapsLib.polygon6.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("0-1%", "1-2%", "2-3%", "3-4%", "4-5%");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#ffd966"});
+      $("#legend-5").css({"border-top-color": "#faa61a"});
     }
     if ($("#rbPolygon7").is(':checked')) {
       MapsLib.polygon7.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("0-4%", "4-8%", "8-12%", "12-16%", "16-20%");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#404040"});
+      $("#legend-2").css({"border-top-color": "#bababa"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#93c47d"});
+      $("#legend-5").css({"border-top-color": "#00ae58"});
     }
-    if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
-      MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
+    if ($("#rbPolygonOff").is(':checked')) {
+      MapsLib.polygonOff.setMap(map);
+      MapsLib.setDemographicsLabels("&ndash", "ndash", "ndash", "ndash", "ndash");
+      /* TO DO: Insert actual brownie colors */
+      $("#legend-1").css({"border-top-color": "#ffffff"});
+      $("#legend-2").css({"border-top-color": "#ffffff"});
+      $("#legend-3").css({"border-top-color": "#ffffff"});
+      $("#legend-4").css({"border-top-color": "#ffffff"});
+      $("#legend-5").css({"border-top-color": "#ffffff"});
     }
 
     var address = $("#search_address").val();
@@ -228,7 +265,7 @@ var MapsLib = {
     if ( $("#cbType3").is(':checked')) searchType += "3,";
     if ( $("#cbType4").is(':checked')) searchType += "4,";
     if ( $("#cbType5").is(':checked')) searchType += "5,";
-    if ( $("#cbType5").is(':checked')) searchType += "6,";
+    if ( $("#cbType6").is(':checked')) searchType += "6,";
     whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
     //-------end of custom filters--------
 
